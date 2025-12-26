@@ -9,8 +9,8 @@ IF NOT %pypi_index%"" == "" SET pypi_index=--index-url %pypi_index%
 :: Upgrade pip & wheel
 %python% -m pip install --upgrade pip wheel %pypi_index%
 
-::Install prebuild wheel
-%python% -m pip install --extra-index-url https://pypi.vnpy.com ta_lib==0.6.4
+::Install prebuild wheel from local pack directory
+%python% -m pip install pack/ta_lib-0.6.8-cp314-cp314-win_amd64.whl
 
 :: Install VeighNa
 %python% -m pip install .
